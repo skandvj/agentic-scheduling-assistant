@@ -23,7 +23,7 @@ export default function Home() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
-      content: "Hello! I'm your dental practice assistant. How can I help you today?",
+      content: "Hi, I'm the Agentic Scheduling Assistant. I can help collect intake details, book appointments, reschedule visits, handle cancellations, and escalate urgent requests.",
       timestamp: new Date(),
     },
   ])
@@ -140,8 +140,8 @@ export default function Home() {
       {/* Header */}
       <header className="border-b border-border bg-surface/50 backdrop-blur-xl">
         <div className="max-w-4xl mx-auto px-6 py-4">
-          <h1 className="text-xl font-semibold text-text">Premium Dental Care</h1>
-          <p className="text-sm text-textSecondary mt-1">Intelligent Practice Assistant</p>
+          <h1 className="text-xl font-semibold text-text">Agentic Scheduling Assistant</h1>
+          <p className="text-sm text-textSecondary mt-1">AI intake, booking, rescheduling, and escalation</p>
         </div>
       </header>
 
@@ -222,4 +222,3 @@ export default function Home() {
     </div>
   )
 }
-

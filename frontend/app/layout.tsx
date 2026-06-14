@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Premium Dental Care - Chatbot',
-  description: 'Intelligent dental practice assistant',
+  title: 'Agentic Scheduling Assistant',
+  description: 'AI assistant for intake, booking, rescheduling, and escalation',
 }
 
 export default function RootLayout({
@@ -17,4 +17,3 @@ export default function RootLayout({
     </html>
   )
 }
-

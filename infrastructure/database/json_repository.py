@@ -1,6 +1,7 @@
 """JSON-based repository implementation."""
 
 import json
+import os
 import uuid
 from datetime import datetime, timedelta
 from typing import Optional, List
@@ -16,9 +17,9 @@ from .repository import PatientRepository, AppointmentRepository
 class JSONPatientRepository(PatientRepository):
     """JSON-based patient repository."""
     
-    def __init__(self, db_path: str = "./data/database.json"):
+    def __init__(self, db_path: Optional[str] = None):
         """Initialize repository with database path."""
-        self.db_path = Path(db_path)
+        self.db_path = Path(db_path or os.getenv("DATABASE_PATH", "./data/database.json"))
         self.db_path.parent.mkdir(parents=True, exist_ok=True)
     
     async def _load_data(self) -> dict:
@@ -91,9 +92,9 @@ class JSONPatientRepository(PatientRepository):
 class JSONAppointmentRepository(AppointmentRepository):
     """JSON-based appointment repository."""
     
-    def __init__(self, db_path: str = "./data/database.json"):
+    def __init__(self, db_path: Optional[str] = None):
         """Initialize repository with database path."""
-        self.db_path = Path(db_path)
+        self.db_path = Path(db_path or os.getenv("DATABASE_PATH", "./data/database.json"))
         self.db_path.parent.mkdir(parents=True, exist_ok=True)
     
     async def _load_data(self) -> dict:
@@ -228,4 +229,3 @@ class JSONAppointmentRepository(AppointmentRepository):
             await self.update(appointment)
             return True
         return False
-
