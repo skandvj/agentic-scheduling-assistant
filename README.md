@@ -1,6 +1,6 @@
-# Premium Dental Practice Chatbot
+# Agentic Scheduling Assistant
 
-A sophisticated, scalable conversational AI chatbot for dental practices built with LangGraph, LangChain, and modern web technologies. This solution provides natural, human-like interactions for patient management, appointment scheduling, and practice inquiries.
+A sophisticated, scalable conversational Agentic AI chatbot for automating receptionist work, built with LangGraph, LangChain, and modern web technologies. This solution provides natural, human-like interactions for patient management, appointment scheduling, and practice inquiries.
 
 ## 🏗️ Architecture
 
